@@ -1,41 +1,120 @@
 import Head from "next/head";
+import MainHeader from "../components/MainHeader";
+import Banner from "../components/Banner";
+import ProductFeed from "../components/ProductFeed";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Experience from "../components/Experience";
+import Whysignup from "../components/Whysignup";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
 
-export default function Home() {
+export default function Home({products}) {
   return (
-    <div>
+    // <div className="bg-gray-100 h-screen">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#7FAB0A]">
       <Head>
-        <title>Amazon 2.0</title>
+        <title>Urban Savanna</title>
       </Head>
 
-      {/* ---- TO BEGIN, delete this section and GET CODING!!! ---- */}
-      <center className="grid place-items-center mt-10">
-        <h1 className="text-5xl">Lets build Amazon 2.0</h1>
-        <h2>This is your starter template!</h2>
-        <br />
-        <h3 className="font-bold">
-          We will be using Next.js / Tailwind CSS / Redux / Firebase / NextAuth
-        </h3>
-        <i>(Dont worry, its all setup and ready to use!)</i>
-        <h4>Get Ready, Get Set, GO!!!</h4>
+      {/*Header */}
+      <MainHeader/>
+      {/* Body */}
+      <main className="max-w-screen-2xl mx-auto">
+        {/* hero */}
+          <section id="hero" className="snap-start">
+            <Hero />
+          </section>
 
-        <h5 className="mb-10">#PAPAFAM</h5>
+          {/* Why Signup with us? */}
+          <section id='projects' className='snap-start'>
+            <Whysignup />
+          </section>
 
-        <div className="bg-red-300 p-10">
-          <p className="font-bold">
-            Dont forget to register for the challenge here!
-          </p>
-          <p>👇👇👇</p>
-          <a
-            href="https://www.papareact.com/secret-challenge"
-            className="text-blue-400 underline p-3 font-bold"
-          >
-            CLICK HERE TO REGISTER NOW
-          </a>
-        </div>
+          {/* About */}
+          <section id="about" className="snap-center">
+             <About />
+          </section>
 
-        <p className="mt-24">Built with 💙 by Sonny Sangha (PAPA REACT)</p>
-      </center>
-      {/* ---- ---- */}
+          {/* Experience */}
+          <section id="experience" className="snap-center">
+            <Experience />
+          </section>
+
+          <section id='projects' className='snap-start'>
+            <Projects />
+          </section>
+
+          {/* Contact */}
+          <section id='contact' className='snap-start'>
+            <Contact />
+           </section>
+
+          {/* Footer */}
+           <a href="#hero">
+            <footer className='sticky bottom-5 w-full cursor-pointer '>
+              <div className='flex items-center justify-center'>
+                <img 
+                className='h-12 w-12 md:h-16 md:w-16 rounded-full grayscale hover:grayscale-0 cursor-pointer bg-[#F5F5DC]'
+                src="./logo/logo.png" alt="" />
+              </div>
+            </footer>
+            </a>
+
+
+
+          {/* Product feed */}
+        {/* <ProductFeed products={products}/> */}
+      </main>
     </div>
   );
 }
+
+export async function getServerSideProps(Context) {
+  const products = await fetch (" https://dummyjson.com/products").then(
+    (res) => res.json()
+  );
+
+  return { props: {
+    products
+  }}
+}
+// export async function getServerSideProps(Context) {
+//   const products = await fetch ("http://fakestoreapi.com/products").then(
+//     (res) => res.json()
+//   );
+
+//   return { props: {
+//     products
+//   }}
+// }
+// export async function getServerSideProps(context) {
+//   try {
+//     const res = await fetch("http://fakestoreapi.com/products");
+
+//     // Check if the response is okay (status code 200-299)
+//     if (!res.ok) {
+//       throw new Error(`Failed to fetch data. Status: ${res.status}`);
+//     }
+
+//     const products = await res.json();
+
+//     return {
+//       props: {
+//         products,
+//       },
+//     };
+//   } catch (error) {
+//     console.error('Error fetching products:', error.message);
+
+//     // Return an empty products array if something goes wrong
+//     return {
+//       props: {
+//         products: [],
+//       },
+//     };
+//   }
+// }
+
+
+// http://fakestoreapi.com/products
