@@ -27,7 +27,7 @@ function Contact() {
       <div className='flex flex-col space-y-10'>
         <h4 className='text-lg md:text-4xl font-semibold text-center pt-20 mt-10'>
           Are there available slot left in your city?{' '}
-          <span className='decoration-[#F7AB0A]/50 underline'>Check Now!</span>
+          <span className='decoration-[#F7AB0A]/50 underline'>Send us your info in the form to verify the validity of your location.</span>
         </h4>
       </div>
 
@@ -38,7 +38,7 @@ function Contact() {
         </div>
         <div className='flex items-center space-x-5 justify-center mt-5'>
           <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-          <p className='text-lg md:text-xl'>afrisavvy@gmail.com</p>
+          <p className='text-lg md:text-xl'>edenmart@gmail.com</p>
         </div>
         {/* <div className='flex items-center space-x-5 justify-center mt-5'>
           <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
@@ -106,16 +106,6 @@ function Contact() {
             </label>
             {errors.subject && <p className='text-red-600'>This field is required</p>}
           </div>
-
-          {/* <div className='relative mb-4'>
-            <label className='leading-7 text-sm text-gray-600'>Message
-              <textarea
-                {...register('message', { required: true })}
-                className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
-              ></textarea>
-            </label>
-            {errors.message && <p className='text-red-600'>This field is required</p>}
-          </div> */}
 
           <button
             type='submit'

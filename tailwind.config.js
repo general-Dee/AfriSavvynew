@@ -28,5 +28,13 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  // plugins: [
+  //   require('tailwind-scrollbar'),
+  // ],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
+  variants: {
+    scrollbar: ['rounded'], // Optionally enable rounded scrollbars
+  },
 };

@@ -14,7 +14,7 @@ export default function Home({products}) {
     // <div className="bg-gray-100 h-screen">
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#7FAB0A]">
       <Head>
-        <title>Urban Savanna</title>
+        <title>SavannaLink</title>
       </Head>
 
       {/*Header */}
@@ -26,14 +26,14 @@ export default function Home({products}) {
             <Hero />
           </section>
 
-          {/* Why Signup with us? */}
-          <section id='projects' className='snap-start'>
-            <Whysignup />
+          {/* About */}
+          <section id="about" className="snap-center sm:mt-10">
+             <About />
           </section>
 
-          {/* About */}
-          <section id="about" className="snap-center">
-             <About />
+          {/* Why Signup with us? */}
+          <section id='whysignup' className='snap-start'>
+            <Whysignup />
           </section>
 
           {/* Experience */}
@@ -56,7 +56,7 @@ export default function Home({products}) {
               <div className='flex items-center justify-center'>
                 <img 
                 className='h-12 w-12 md:h-16 md:w-16 rounded-full grayscale hover:grayscale-0 cursor-pointer bg-[#F5F5DC]'
-                src="./logo/logo.png" alt="" />
+                src="./img/logo.jpg" alt="" />
               </div>
             </footer>
             </a>

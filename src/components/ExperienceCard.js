@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 // }
 
 // function ExperienceCard({title, imageUrl, heading, description}: Props) {
-function ExperienceCard() {
+function ExperienceCard({title, imageUrl, heading, description}) {
   return (
     <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] hover:opacity-100 opacity-50 snap-center bg-[#292929] p-10 cursor-pointer transition-opacity duration-200 overflow-hidden'>
         {/* <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Experience</h3> */}
@@ -30,17 +30,17 @@ function ExperienceCard() {
         }}
 
         className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
-        src="" alt="" />
+        src={imageUrl} alt="" />
 
         <div className='px-0 md:px-10'>
-            <h4 className='text-4xl font-bold'></h4>
-            <p className='text-lg mt-1 font-light'></p>
+            <h4 className='text-4xl font-bold'>{title}</h4>
+            <p className='text-lg mt-1 font-light'>{heading}</p>
 
             {/* <p>{description}</p>               */}
             {/* <p className='uppercase py-5 text-gray-300'>Started work... - Ended work...</p> */}
 
             <ul className='list-disc space-y-4 ml-5 text-sm pt-10'>
-                <li></li>              
+                <li>{description}</li>              
             </ul>
         </div>
     </article>
