@@ -22,10 +22,10 @@ function Contact() {
 
   return (
     <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
-      <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Signup Now</h3>
+      <h3 className='absolute top-24 uppercase  tracking-[10px] md:tracking-[20px] text-gray-500 text-2xl'>Signup Now</h3>
 
       <div className='flex flex-col space-y-10'>
-        <h4 className='text-lg md:text-4xl font-semibold text-center pt-20 mt-10'>
+        <h4 className='text-lg md:text-4xl font-semibold text-center pt-20 mt-20 md:mt-10'>
           Are there available slot left in your city?{' '}
           <span className='decoration-[#F7AB0A]/50 underline'>Send us your info in the form to verify the validity of your location.</span>
         </h4>

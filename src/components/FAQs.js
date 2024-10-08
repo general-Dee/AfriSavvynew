@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 
 
-function Projects() {
+function FAQs() {
     const projects = [
         {
             title: "How is it possible that you get between N20,000 to N30,000 weekly profits selling products without any marketing?",
@@ -45,15 +45,15 @@ function Projects() {
     transition={{
         duration: 1.5,
     }}
-    className='h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Frequently Asked Questions [FAQs]</h3>
+    className='h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mb-5 mx-auto items-center z-0'>
+        <h3 className='absolute top-20 px-20 md:px-0 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl'>Frequently Asked Questions (FAQs)</h3>
 
-        <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#7FAB0A]'>
+        <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory md:top-0 z-20 scrollbar-track-gray-400/20 scrollbar-thumb-[#7FAB0A]'>
             {projects.map((project, i) => (
-                <div key={i+1} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center p-20 md:p-44 h-screen items-center pt-40'>
+                <div key={i+1} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center p-20 md:p-44 h-screen items-center pt-20'>
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl '>
-                        <h4 className='text-4xl font-semibold text-center'>
-                            <span className='underline decoration-[#F7AB0A]/50 text-lg'>FAQ {i + 1} of {projects.length}: </span>
+                        <h4 className='text-xl md:text-4xl font-semibold text-center'>
+                            <span className='underline decoration-[#F7AB0A]/50 text-sm'>FAQ {i + 1} of {projects.length}: </span>
                             {project.title}
                         </h4>
 
@@ -71,4 +71,4 @@ function Projects() {
   )
 }
 
-export default Projects
+export default FAQs

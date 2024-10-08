@@ -1,13 +1,13 @@
 import Head from "next/head";
 import MainHeader from "../components/MainHeader";
-import Banner from "../components/Banner";
-import ProductFeed from "../components/ProductFeed";
 import Hero from "../components/Hero";
 import About from "../components/About";
-import Experience from "../components/Experience";
+import Testimonials from "../components/Testimonials";
 import Whysignup from "../components/Whysignup";
-import Projects from "../components/Projects";
+import FAQs from "../components/FAQs";
 import Contact from "../components/Contact";
+// import Banner from "../components/Banner";
+// import ProductFeed from "../components/ProductFeed";
 
 export default function Home({products}) {
   return (
@@ -38,11 +38,11 @@ export default function Home({products}) {
 
           {/* Experience */}
           <section id="experience" className="snap-center">
-            <Experience />
+            <Testimonials />
           </section>
 
           <section id='projects' className='snap-start'>
-            <Projects />
+            <FAQs />
           </section>
 
           {/* Contact */}

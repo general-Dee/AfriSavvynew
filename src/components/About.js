@@ -18,7 +18,7 @@ function About() {
             once: true,
         }}
         className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center space-y-20 py-10 mb-60">
-        <h3 className="absolute md:text-gray-600 top-20 uppercase tracking-[20px] text-gray-500 text-2xl ">
+        <h3 className="absolute md:text-gray-600 top-20 uppercase  tracking-[10px] md:tracking-[20px] text-gray-500 text-2xl ">
             About
         </h3>
         <motion.img 
